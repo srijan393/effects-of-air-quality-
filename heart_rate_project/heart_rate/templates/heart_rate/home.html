@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects of Heart Rate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.n et/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-light p-3 text-center">
+        <h1>Effects of Heart Rate</h1>
+        <button class="btn btn-secondary">About</button>
+        <button class="btn btn-dark">Live Data</button>
+    </header>
+
+    <section class="container mt-4">
+        <div class="row">
+            {% for room in rooms %}
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h4>{{ room.name }}</h4>
+                    <p>{{ room.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>
